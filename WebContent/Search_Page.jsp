@@ -26,6 +26,9 @@ font-size: 20px;
 text-decoration: none;
 color: white;
 }
+.home:hover{
+color: #dce1de;
+}
 input[type=date], select {
   width: 100%;
   padding: 12px;
@@ -42,6 +45,9 @@ input[type=submit] {
   border: none;
   border-radius: 4px;
   cursor: pointer;
+}
+input[type=submit]:hover{
+background-color: #8ecae6;
 }
 .container {
   width: 20%;

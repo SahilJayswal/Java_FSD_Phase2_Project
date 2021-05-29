@@ -44,6 +44,9 @@ font-size: 20px;
 text-decoration: none;
 color: white;
 }
+.home:hover{
+color: #dce1de;
+}
 input[type=text], [type=password] {
   width: 100%;
   padding: 12px;
@@ -60,6 +63,9 @@ input[type=text], [type=password] {
   padding: 10px;
   margin-left: 535px;
 }
+input[type=submit]:hover{
+background-color: #8ecae6;
+}
 input[type=submit] {
   background-color: #457b9d;
   color: white;
@@ -70,7 +76,7 @@ input[type=submit] {
 }
 footer{
     position: relative;
-    top: 270px;
+    top: 210px;
     color: black;
     padding: 9px 25px;
     text-align: center;

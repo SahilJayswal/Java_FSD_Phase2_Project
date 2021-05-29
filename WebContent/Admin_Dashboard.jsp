@@ -38,6 +38,9 @@ font-size: 20px;
 text-decoration: none;
 color: white;
 }
+.home:hover{
+color: #dce1de;
+}
 .para{
 display: flex;
 justify-content: space-around;
@@ -73,6 +76,9 @@ button {
 .logout:hover{
 background-color: #dc2f02;
 }
+.cp:hover{
+background-color: #8ecae6;
+}
 footer{
     position: relative;
         top: 40px;
@@ -90,7 +96,7 @@ footer{
 <p align=center>You are LoggedIn as : admin<br></p><br>
 <div class="para">
 <form action="Change_Password.jsp" method="post">
-<button>Change Password</button>
+<button class="cp">Change Password</button>
 </form>
 <form method="post" action="Admin_Login.jsp">
 <button class="logout">Logout</button>

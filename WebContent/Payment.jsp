@@ -37,6 +37,10 @@ nav {
 	color: white;
 }
 
+.home:hover{
+color: #dce1de;
+}
+
 input[type=text] {
 	width: 100%;
 	padding: 12px;
@@ -62,6 +66,10 @@ input[type=submit] {
 	border: none;
 	border-radius: 4px;
 	cursor: pointer;
+}
+
+input[type=submit]:hover{
+background-color: #8ecae6;
 }
 
 footer {

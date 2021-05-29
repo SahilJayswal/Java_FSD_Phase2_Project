@@ -44,6 +44,9 @@ font-size: 20px;
 text-decoration: none;
 color: white;
 }
+.home:hover{
+color: #dce1de;
+}
 .para{
 display: flex;
 justify-content: space-around;
@@ -75,6 +78,9 @@ button {
   border: none;
   border-radius: 4px;
   cursor: pointer;
+}
+button:hover{
+background-color: #8ecae6;
 }
 .book:hover{
 background-color: #74c69d;

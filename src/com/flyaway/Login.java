@@ -61,7 +61,7 @@ public class Login extends HttpServlet {
 			ResultSet rst = stmt.executeQuery("select * from admin");
 			while(rst.next()) {
 				
-				if(id.equals(rst.getString("userid")) && pass.equals(rst.getString("password"))) {
+				if(id.equalsIgnoreCase(rst.getString("userid")) && pass.equals(rst.getString("password"))) {
 		    		response.sendRedirect("Admin_Dashboard.jsp");
 		    		
 		    }

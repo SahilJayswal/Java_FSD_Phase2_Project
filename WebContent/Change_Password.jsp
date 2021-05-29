@@ -27,6 +27,9 @@ font-size: 20px;
 text-decoration: none;
 color: white;
 }
+.home:hover{
+color: #dce1de;
+}
 input[type=text], [type=password] {
   width: 100%;
   padding: 12px;
@@ -51,9 +54,12 @@ input[type=submit] {
   border-radius: 4px;
   cursor: pointer;
 }
+input[type=submit]:hover{
+background-color: #8ecae6;
+}
 footer{
     position: relative;
-    top: 270px;
+    top: 360px;
     color: black;
     padding: 9px 25px;
     text-align: center;
