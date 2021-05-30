@@ -59,7 +59,7 @@ background-color: #8ecae6;
 }
 footer{
     position: relative;
-    top: 390px;
+    top: 360px;
     color: black;
     padding: 9px 25px;
     text-align: center;

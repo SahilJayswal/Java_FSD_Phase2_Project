@@ -76,7 +76,7 @@ input[type=submit] {
 }
 footer{
     position: relative;
-    top: 230px;
+    top: 190px;
     color: black;
     padding: 9px 25px;
     text-align: center;
