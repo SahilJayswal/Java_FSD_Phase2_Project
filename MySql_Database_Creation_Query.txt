@@ -51,8 +51,8 @@ INSERT INTO `flight` (`flight_id`, `name`, `source`, `destination`, `days`, `pri
 
 select * from flight
 -------------------------------------------------------------------------------------------------------------------
-create table admin(id int primary key not null, userid varchar(21), password varchar(100))
+create table admin(id int primary key not null, user varchar(21), pass varchar(100))
 
-insert into admin(id, userid, password) values(1, 'admin', '1234')
+insert into admin(id, user, pass) values(1, 'admin', '1234')
 
 select * from admin
