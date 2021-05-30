@@ -89,16 +89,22 @@ footer{
 </style>
 </head>
 <body>
+<%
+if(session.getAttribute("userid") == null)
+{
+	response.sendRedirect("Admin_Login.jsp?error=1");	
+}
+%>
 <nav>
 <a class="home" href="index.html">FlyAway</a>
 </nav>
 <h1 align="center">Admin Dashboard</h1>
-<p align=center>You are LoggedIn as : admin<br></p><br>
+<p align=center>You are LoggedIn as : <%= session.getAttribute("userid") %><br></p><br>
 <div class="para">
 <form action="Change_Password.jsp" method="post">
 <button class="cp">Change Password</button>
 </form>
-<form method="post" action="Admin_Login.jsp">
+<form method="post" action="Logout.jsp">
 <button class="logout">Logout</button>
 </form>
 </div>

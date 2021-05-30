@@ -59,7 +59,7 @@ background-color: #8ecae6;
 }
 footer{
     position: relative;
-    top: 360px;
+    top: 390px;
     color: black;
     padding: 9px 25px;
     text-align: center;
@@ -67,6 +67,12 @@ footer{
 </style>
 </head>
 <body>
+<%
+if(session.getAttribute("userid") == null)
+{
+	response.sendRedirect("Admin_Login.jsp?error=1");	
+}
+%>
 <nav>
 <a class="home" href="index.html">FlyAway</a>
 </nav>

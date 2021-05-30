@@ -11,6 +11,8 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
 import com.flyaway.DBConnection;
 
 
@@ -43,8 +45,8 @@ public class Change_Password extends HttpServlet {
 			
 			PrintWriter out = response.getWriter();
 			out.print("<html><body>");
-		 	String pass = request.getParameter("password");
-		 	out.print("Your New Password is: "+ pass);
+		 	String password = request.getParameter("password");
+		 	out.print("Your New Password is: "+ password);
 		    
 		 	try {
 				
@@ -55,11 +57,15 @@ public class Change_Password extends HttpServlet {
 				DBConnection conn = new DBConnection(prop.getProperty("url"), prop.getProperty("user"), prop.getProperty("password"));
 			
 				Statement stmt = conn.getConnection().createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
-				stmt.executeUpdate("update admin set password= '"+pass+"' where id=1");
+				stmt.executeUpdate("update admin set pass= '"+password+"' where id=1");
 		 	}catch(Exception e) {
 				e.printStackTrace();
 			}
 		 	out.print("<br><br><a href='Admin_Login.jsp'>Click Here to Login</a>");
+		 	
+		 	HttpSession session = request.getSession(false);
+		 	session.invalidate();
+		 	
 		 	out.print("</body></html>");
 	}
 

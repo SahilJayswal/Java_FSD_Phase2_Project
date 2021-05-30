@@ -74,7 +74,7 @@ background-color: #8ecae6;
 
 footer {
 	position: relative;
-	top: 200px;
+	top: 120px;
 	color: black;
 	padding: 9px 25px;
 	text-align: center;
@@ -85,7 +85,7 @@ footer {
 	<nav>
 		<a class="home" href="index.html">FlyAway</a>
 	</nav>
-	<h2 align="center">Booking Details</h2>
+	<h2 align="center">Payment Details</h2>
 	<br>
 	<div class="container">
 		<form action="Ticket_Summary.jsp" method="post">

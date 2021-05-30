@@ -12,6 +12,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import com.flyaway.DBConnection;
 
@@ -42,8 +43,14 @@ public class Login extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-				String id = request.getParameter("userid");
-				String pass = request.getParameter("password");
+				String userid = request.getParameter("userid");
+				String password = request.getParameter("password");
+				
+				
+				if (userid == null || userid.equals("") || password == null || password.equals("")) {
+					response.sendRedirect("Admin_Login.jsp?error=1");
+				}
+				
 				
 				
 				PrintWriter out = response.getWriter();
@@ -61,7 +68,9 @@ public class Login extends HttpServlet {
 			ResultSet rst = stmt.executeQuery("select * from admin");
 			while(rst.next()) {
 				
-				if(id.equalsIgnoreCase(rst.getString("userid")) && pass.equals(rst.getString("password"))) {
+				if(userid.equalsIgnoreCase(rst.getString("user")) && password.equals(rst.getString("pass"))) {
+					HttpSession session = request.getSession();
+					session.setAttribute("userid", userid);
 		    		response.sendRedirect("Admin_Dashboard.jsp");
 		    		
 		    }
@@ -86,5 +95,5 @@ public class Login extends HttpServlet {
 		      
 		out.print("</body></html>");
 	}
-
+	
 }

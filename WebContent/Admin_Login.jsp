@@ -76,17 +76,21 @@ input[type=submit] {
 }
 footer{
     position: relative;
-    top: 210px;
+    top: 230px;
     color: black;
     padding: 9px 25px;
     text-align: center;
 }
 </style>
 </head>
-<body>        
+<body>       
 <nav>
 <a class="home" href="index.html">FlyAway</a>
-</nav>
+</nav><br>
+<%
+		if (request.getParameter("error") != null) 
+			out.println("<b><span style='color:red; background-color:white'> Your Session has Expired or Invalid, Please Login Again!!!</span>");
+	%> 
 <h2 align="center">Admin Login</h2><br>
 <%
                 try{
@@ -95,8 +99,8 @@ footer{
                     String sql ="SELECT * FROM admin";
                     resultSet = statement.executeQuery(sql);
                     while(resultSet.next()){
-                    	 id = resultSet.getString("userid");
-                    	 pass = resultSet.getString("password");
+                    	 id = resultSet.getString("user");
+                    	 pass = resultSet.getString("pass");
         %>
         <% 
               }       
