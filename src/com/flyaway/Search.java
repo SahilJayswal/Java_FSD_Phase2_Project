@@ -7,7 +7,4 @@ public abstract class Search {
     public static String destination;
     public static int persons;
 
-    public static String getQuery() {
-        return "SELECT * FROM flight WHERE source = '"+source+"' and destination='"+destination+"' and days='"+day+"'";
-    }
 }
